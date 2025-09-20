@@ -3,7 +3,7 @@
     <div class="hero-bg">
       <video ref="videoEl" class="hero-video"  preload="metadata" autoplay muted playsinline
         loop>
-        <source src="/video/animVideo.mp4" type="video/mp4" />
+        <source src="/video/animVideo-optimized.mp4" type="video/mp4" />
       </video>
       <div class="vignette" aria-hidden="true"></div>
     </div>
@@ -102,9 +102,9 @@
     object-position: 50% 30%;
     display: block;
     backface-visibility: hidden;
-    transform: translateZ(0)
+    transform: translateZ(0);
   }
-
+ 
   .hero-center {
     position: relative;
     z-index: 2;
