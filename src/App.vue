@@ -17,7 +17,7 @@
     <Quotes id="quotes" class="section section--card" />
     <InspirationGarden id="inspiration" :items="gardenItems" class="section" />
 
-    <Notifier :messages="toastMessages" :startDelayMs="5 * 60 * 1000" :showMs="9000" :gapMs="1200" />
+    <Notifier :messages="toastMessages" :startDelayMs="8000" :showMs="9000" :gapMs="1200" />
 
     <footer id="contact" class="footer-dark section">
       <div class="container">

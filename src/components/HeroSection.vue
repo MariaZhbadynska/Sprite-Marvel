@@ -215,6 +215,9 @@
   }
 
   @media (max-width: 840px) {
+    .brand span{
+      display: none;
+    }
     .hero-bottom {
       flex-direction: column;
       align-items: center;
