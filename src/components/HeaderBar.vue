@@ -145,4 +145,11 @@ const scrollTo = scrollToSel;
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+@media (max-width: 860px) {
+.navbar-brand span{
+  display: none;
+}
+
+}
 </style>

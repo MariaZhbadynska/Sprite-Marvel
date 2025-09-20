@@ -1,7 +1,7 @@
 <template>
   <section class="hero section section--pinned" ref="root">
     <div class="hero-bg">
-      <video ref="videoEl" class="hero-video" preload="metadata" autoplay muted playsinline loop>
+      <video ref="videoEl" poster="/imgs/poster.png" class="hero-video" preload="metadata" autoplay muted playsinline loop>
   <source src="/video/animVideo-optimized-v3.mp4" type="video/mp4" />
 </video>
 
@@ -211,7 +211,6 @@
     inset: -10%;
     z-index: 1;
     pointer-events: none;
-    background: radial-gradient(60% 60% at 50% 60%, transparent, rgba(0, 0, 0, .3) 70%)
   }
 
   @media (max-width: 840px) {
