@@ -3,7 +3,7 @@
     <div class="hero-bg">
       <video ref="videoEl" class="hero-video"  preload="metadata" autoplay muted playsinline
         loop>
-        <source src="/video/hero.mp4" type="video/mp4" />
+        <source src="/video/animVideo.mp4" type="video/mp4" />
       </video>
       <div class="vignette" aria-hidden="true"></div>
     </div>
