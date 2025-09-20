@@ -1,10 +1,10 @@
 <template>
   <section class="hero section section--pinned" ref="root">
     <div class="hero-bg">
-      <video ref="videoEl" class="hero-video"  preload="metadata" autoplay muted playsinline
-        loop>
-        <source src="/video/animVideo-optimized.mp4" type="video/mp4" />
-      </video>
+      <video ref="videoEl" class="hero-video" preload="metadata" autoplay muted playsinline loop>
+  <source src="/video/animVideo-optimized-v3.mp4" type="video/mp4" />
+</video>
+
       <div class="vignette" aria-hidden="true"></div>
     </div>
 
