@@ -1,17 +1,17 @@
 <template>
   <section class="cards">
     <div class="card-cell">
-      <HoloCard img="./imgs/woman1.png" kicker="PRODUCTION DESIGNER" name="HANNAH BEACHLER" role="ORIGIN STORIES"
+      <HoloCard img="/imgs/woman1.png" kicker="PRODUCTION DESIGNER" name="HANNAH BEACHLER" role="ORIGIN STORIES"
         tagline="Bringing your whole self to every project" />
     </div>
 
     <div class="card-cell">
-      <HoloCard img="./imgs/woman2.png" kicker="STORYBOARD ARTIST" name="JASMINE ALEXIA" role="ORIGIN STORIES"
+      <HoloCard img="/imgs/woman2.png" kicker="STORYBOARD ARTIST" name="JASMINE ALEXIA" role="ORIGIN STORIES"
         tagline="Create the world you want to see" />
     </div>
 
     <div class="card-cell">
-      <HoloCard img="./imgs/woman3.png" kicker="SCULPTOR" name="ALICIA DÍAZ" role="ORIGIN STORIES"
+      <HoloCard img="/imgs/woman3.png" kicker="SCULPTOR" name="ALICIA DÍAZ" role="ORIGIN STORIES"
         tagline="When one door closes, carve a new one" />
     </div>
   </section>

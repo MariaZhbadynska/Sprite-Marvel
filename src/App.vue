@@ -104,9 +104,9 @@
   ]
 
   const gardenItems = [
-    { img: '/statue1.png', quote: 'I AM LOYAL TO THAT THRONE, NO MATTER WHO SITS ON IT.', author: 'DORA MILAJE', cipher: 'DWYY DX9AX', body: 'Much can be gleaned from these elite warriors...' },
-    { img: '/statue2.png', quote: "JUST BECAUSE SOMETHING WORKS DOESN'T MEAN IT CAN’T BE IMPROVED.", author: 'SHURI', cipher: 'C0ØYX', body: 'Both a problem solver and maker by nature...' },
-    { img: '/statue3.png', quote: 'WITNESS THE STRENGTH OF THE JABARI… FIRST-HAND!', author: "M'BAKU", cipher: 'P17W6', body: 'Behold the gifts of a great leader...' }
+    {  quote: 'I AM LOYAL TO THAT THRONE, NO MATTER WHO SITS ON IT.', author: 'DORA MILAJE', cipher: 'DWYY DX9AX', body: 'Much can be gleaned from these elite warriors...' },
+    {  quote: "JUST BECAUSE SOMETHING WORKS DOESN'T MEAN IT CAN’T BE IMPROVED.", author: 'SHURI', cipher: 'C0ØYX', body: 'Both a problem solver and maker by nature...' },
+    {  quote: 'WITNESS THE STRENGTH OF THE JABARI… FIRST-HAND!', author: "M'BAKU", cipher: 'P17W6', body: 'Behold the gifts of a great leader...' }
   ]
 
   const cards = [

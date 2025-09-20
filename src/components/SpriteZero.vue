@@ -19,7 +19,7 @@
 
 <script setup>
     const props = defineProps({
-        img: { type: String, default: './imgs/man4.png' }
+        img: { type: String, default: '/imgs/man4.png' }
     })
 </script>
 
