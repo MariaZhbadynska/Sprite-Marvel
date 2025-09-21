@@ -1,5 +1,5 @@
 <template>
-    <div class="holo-card" :style="{'--img': `url(${img})`}" ref="card" @mousemove="onMove" @mouseleave="onLeave">
+    <div class="holo-card" :style="{'--img': `url(${img})`}" ref="card">
         <svg class="frame" viewBox="0 0 100 150" preserveAspectRatio="none" aria-hidden="true">
             <path d="M6,0 H94 L100,8 V142 L94,150 H6 L0,142 V8 Z
              M8,6 H92 L94,9 V141 L92,144 H8 L6,141 V9 Z" fill="none" stroke="rgba(64,255,164,.9)" stroke-width="1.5"
@@ -35,17 +35,7 @@
 
     const card = ref(null)
 
-    function onMove(e) {
-        const r = card.value.getBoundingClientRect()
-        const px = (e.clientX - r.left) / r.width
-        const py = (e.clientY - r.top) / r.height
-        const rx = (py - .5) * -props.tilt
-        const ry = (px - .5) * props.tilt
-        card.value.style.setProperty('--rx', `${rx}deg`)
-        card.value.style.setProperty('--ry', `${ry}deg`)
-        card.value.style.setProperty('--hlx', `${px * 100}%`)
-        card.value.style.setProperty('--hly', `${py * 100}%`)
-    }
+
 
     function onLeave() {
         card.value.style.setProperty('--rx', `0deg`)
@@ -66,15 +56,34 @@
         --hly: 50%;
         width: min(23rem, 86vw);
         aspect-ratio: 2/3;
+        transform: perspective(800px) rotateX(0) rotateY(0);
+        transition: transform .18s ease-out, box-shadow .18s ease-out;
         position: relative;
         border-radius: var(--radius);
         transform-style: preserve-3d;
-        transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
-        transition: transform .2s ease-out, box-shadow .2s ease-out;
         box-shadow: 0 12px 40px rgba(0, 0, 0, .45), inset 0 0 0 1px var(--c-neon-dim);
         overflow: hidden;
         background: #0b0f0d;
         isolation: isolate;
+    }
+
+    .holo-card:hover {
+        transform: perspective(800px) rotateX(-3deg) rotateY(3deg);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, .4);
+    }
+
+    .holo-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(200px 200px at 50% 60%, rgba(255, 255, 255, .10), transparent 40%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .18s ease-out;
+    }
+
+    .holo-card:hover::after {
+        opacity: 1;
     }
 
     .frame {
