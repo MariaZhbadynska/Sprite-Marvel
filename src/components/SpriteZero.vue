@@ -1,12 +1,11 @@
 <template>
     <section class="adneo">
-        <figure class="adneo-media" :style="{'--img': `url(${img})`}">
-            <div class="adneo-media__overlay"></div>
-            <div class="adneo-media__scan" aria-hidden="true"></div>
-            <div class="adneo-media__grain" aria-hidden="true"></div>
+        <figure class="adneo-media">
+            <img class="adneo-media__img" :src="img" alt="" />
+            <div class="adneo-media__overlay" aria-hidden="true"></div>
+
             <figcaption class="sr-only">Sprite Zero Sugar — portrait</figcaption>
         </figure>
-
         <div class="adneo-card">
             <h2 class="adneo-brand">
                 <span>SPRITE</span>
@@ -54,32 +53,44 @@
         position: relative;
         margin: 0;
         width: 100%;
-        border-radius: 23px;
+        border-radius: 20px;
         aspect-ratio: 4/3;
         overflow: hidden;
-        background: var(--img) center/cover no-repeat;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
         transform-style: preserve-3d;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, .55), 0 0 38px rgba(122, 255, 190, .16);
-        clip-path: path("M20 0 H100% V88% C100% 95% 95% 100% 88% 100% H12% C5% 100% 0 95% 0 88% Z");
+        will-change: transform;
+        backface-visibility: hidden;
     }
 
     @media (hover:hover) {
         .adneo-media:hover {
-            transform: perspective(1000px) rotateX(1deg) rotateY(-1.5deg);
+            transform: perspective(900px) rotateX(.8deg) rotateY(-1deg);
         }
     }
+
 
     .adneo-media__overlay {
         position: absolute;
         inset: 0;
         pointer-events: none;
         background:
-            linear-gradient(180deg, rgba(0, 0, 0, .25), transparent 35%),
-            linear-gradient(0deg, rgba(0, 0, 0, .25), transparent 35%),
-            linear-gradient(90deg, rgba(170, 253, 209, .08) 1px, transparent 1px),
+            linear-gradient(180deg, rgba(0, 0, 0, .22), transparent 35%),
+            linear-gradient(0deg, rgba(0, 0, 0, .18), transparent 35%),
             repeating-linear-gradient(180deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 3px);
-        mix-blend-mode: screen;
-        opacity: .8;
+        opacity: .75;
+    }
+
+
+    .adneo-media__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        filter: saturate(.98) contrast(.98) brightness(.95);
+        pointer-events: none;
     }
 
     .adneo-media__scan {
