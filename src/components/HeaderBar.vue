@@ -23,33 +23,37 @@
     <nav id="mainNav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto gap-1 text-center">
         <li class="nav-item">
-          <a class="nav-link" href="#hero" @click.prevent="scrollTo('#hero')">Home</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#gallery" @click.prevent="scrollTo('#gallery')">Cards</a>
-         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Zero" @click.prevent="scrollTo('#Zero')">Zero</a>
+          <a class="nav-link" href="#hero"         @click.prevent="go('#hero')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Quotes" @click.prevent="scrollTo('#Quotes')">Quotes</a>       
+          <a class="nav-link" href="#gallery"      @click.prevent="go('#gallery')">Cards</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Inspiration" @click.prevent="scrollTo('#Inspiration')">Garden</a>       
+          <a class="nav-link" href="#Zero"         @click.prevent="go('#Zero')">Zero</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Quotes"       @click.prevent="go('#Quotes')">Quotes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Inspiration"  @click.prevent="go('#Inspiration')">Garden</a>
         </li>
       </ul>
     </nav>
   </header>
 </template>
 <script setup>
+
+import { Collapse } from 'bootstrap'
+
+
 function scrollToSel(sel) {
   document.querySelector(sel)?.scrollIntoView({ behavior: "smooth" });
 }
 function go(sel) {
   const el = document.getElementById("mainNav");
   if (el?.classList.contains("show")) {
-    const collapse = bootstrap.Collapse.getOrCreateInstance(el);
-    collapse.hide();
+    const collapse = Collapse.getOrCreateInstance(el)
+    collapse.hide()
   }
   scrollToSel(sel);
 }

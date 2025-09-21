@@ -49,8 +49,8 @@ onMounted(() => {
     gsap.from(card, {
       x: 200,
       opacity: 0,
-      duration: 0.8,
-      delay: i * 0.15,
+      duration: 1.75,
+      delay: i * 0.50,
       scrollTrigger: {
         trigger: card,
         start: 'top 80%',

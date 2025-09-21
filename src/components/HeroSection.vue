@@ -2,7 +2,7 @@
   <section class="hero section section--pinned" ref="root">
     <div class="hero-bg">
       <video ref="videoEl" poster="/imgs/poster.png" class="hero-video" preload="metadata" autoplay muted playsinline loop>
-  <source src="/video/animVideo-optimized-v3.mp4" type="video/mp4" />
+  <source src="/video/bestv.mp4" type="video/mp4" />
 </video>
 
       <div class="vignette" aria-hidden="true"></div>
